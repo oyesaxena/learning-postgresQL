@@ -1,13 +1,13 @@
-import { Client } from 'pg';
-
+import pg from 'pg';
+const { Client } = pg;
 // Async function to fetch user data from the database given an email
-async function getUser(email: string) {
+async function getUser(email) {
     const client = new Client({
-        host: 'localhost',
+        host: 'postgresql://testbase_owner:jHG5kVynE0sM@ep-curly-bonus-a5vp5g64.us-east-2.aws.neon.tech/testbase?sslmode=require',
         port: 5432,
         database: 'postgres',
         user: 'postgres',
-        password: 'mysecretpassword',
+        password: 'jHG5kVynE0sM',
     });
 
     try {
